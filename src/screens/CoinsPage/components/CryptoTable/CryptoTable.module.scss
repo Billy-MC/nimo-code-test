@@ -1,0 +1,61 @@
+@import '../../../../assets/styles/variable.scss';
+
+.price {
+	min-width: 210px;
+}
+.table-row {
+	td {
+		padding: 0;
+		padding-right: 10px;
+	}
+}
+
+.rank {
+	svg {
+		cursor: pointer;
+		margin-left: 5px;
+	}
+	span {
+		margin-left: 5px;
+	}
+	padding: 16px;
+	margin-right: 5px;
+}
+
+.percent {
+	color: $primary_color_lighter;
+	&--warn {
+		color: $warn_color;
+	}
+	&--grey {
+		color: $text_color;
+	}
+}
+
+.name-cell {
+	max-width: max-content;
+	&__box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.icon {
+			max-width: 20px;
+			margin-right: 5px;
+		}
+		span {
+			font-weight: bold;
+		}
+	}
+	&__name-icon {
+		display: flex;
+		align-items: center;
+		a {
+			color: $text_color;
+			text-decoration: none;
+		}
+	}
+
+	.symbol {
+		font-size: 11px;
+	}
+}

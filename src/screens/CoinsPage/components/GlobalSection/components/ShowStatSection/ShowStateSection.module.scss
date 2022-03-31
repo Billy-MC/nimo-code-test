@@ -1,0 +1,70 @@
+@import '../../../../../../assets/styles/variable.scss';
+
+@mixin itemBox {
+	flex: 1 1;
+	padding: 16px;
+	margin-right: 16px;
+	box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
+	border-radius: 4px;
+
+	h3 {
+		font-size: 20px;
+	}
+}
+
+@mixin percent {
+	display: flex;
+	align-items: center;
+	h3 {
+		font-size: 14px;
+	}
+	svg {
+		font-size: 13px;
+	}
+	margin-left: 8px;
+}
+
+h3,
+h4 {
+	margin: 0;
+	font-weight: 400;
+}
+h4 {
+	font-size: 14px;
+	color: $text_color_lighter;
+	margin-top: 5px;
+}
+
+.show-state {
+	display: flex;
+	margin: 16px 0;
+	flex-wrap: wrap;
+
+	&__item {
+		@include itemBox;
+		border-left: 8px solid $primary_color;
+		&--grey {
+			@include itemBox;
+			border-left: 8px solid $border_color;
+		}
+		&--warn {
+			@include itemBox;
+			border-left: 8px solid $warn_color;
+		}
+	}
+
+	.total-cap {
+		display: flex;
+		align-items: center;
+
+		&__percent {
+			@include percent;
+			color: $primary_color_lighter;
+
+			&--warn {
+				@include percent;
+				color: $warn_color;
+			}
+		}
+	}
+}

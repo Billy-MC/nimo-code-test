@@ -1,0 +1,58 @@
+@import '../../../../assets/styles/variable.scss';
+
+@mixin percent {
+	display: inline-flex;
+	align-items: center;
+	svg {
+		font-size: 13px;
+	}
+}
+p {
+	margin: 0;
+	color: $text_color_lighter;
+}
+
+.switch-section {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+
+	h1 {
+		margin: 0;
+		font-size: 24px;
+	}
+	label {
+		margin: 0;
+	}
+	span {
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	&__switch {
+		margin: 8px;
+	}
+}
+
+.description {
+	font-size: 14px;
+	color: $text_color_lighter;
+	display: flex;
+
+	.percent {
+		@include percent;
+		color: $primary_color_lighter;
+		&--warn {
+			@include percent;
+			color: $warn_color;
+		}
+	}
+
+	.show-more-btn {
+		color: $text_color_lighter;
+		background-color: transparent;
+		border: none;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}

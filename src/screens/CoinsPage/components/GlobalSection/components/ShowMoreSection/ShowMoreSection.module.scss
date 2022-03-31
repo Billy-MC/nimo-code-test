@@ -1,0 +1,11 @@
+@import '../../../../../../assets/styles/variable.scss';
+
+.read-more {
+	font-size: 14px;
+	margin-top: 16px;
+	max-width: 672px;
+	text-align: justify;
+	a {
+		color: $primary_color;
+	}
+}
