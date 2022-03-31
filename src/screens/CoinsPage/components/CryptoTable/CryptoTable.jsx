@@ -19,10 +19,10 @@ import CryptoTableHead from './components/CryptoTableHead';
 import styles from './CryptoTable.module.scss';
 
 const percentColor = value => {
-	return `percent${value === '?' ? '--grey' : value > 0 ? '' : '--warn'}`;
+	return `percent${value === null ? '--grey' : value > 0 ? '' : '--warn'}`;
 };
 const percentSymbol = value => {
-	return value === '?' ? '' : '%';
+	return value === null ? '' : '%';
 };
 
 const stableSort = (arr, comparator) => {
